@@ -1,0 +1,18 @@
+.navigation {
+    width: 100%;
+    background-color: #45527A;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.8em;
+    position: fixed;
+    left: 0;
+    top: 325px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+.nav-link:hover {
+    color: #A30604;
+}
