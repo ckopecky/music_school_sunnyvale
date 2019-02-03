@@ -1,21 +1,30 @@
 import React, { Component } from 'react';
-import logo from "./media/New_Banner.png";
+import { Switch, Route } from 'react-router-dom';
+import logo from "./media/Music_School_Logo.png";
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
+import History from './components/History/History';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state ={
-      nav: ['History', 'Faculty', 'PRIVATE LESSONS', 'CLASSES', 'Enroll Now', 'My Account']
+      primaryNav: ['Sign In', 'Stay Informed', 'Calendar', 'Location', 'Donate'],
+      secondaryNav: ['EDUCATION', 'PERFORMANCE', 'COMMUNITY']
     }
   }
+
+  
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} alt="logo"/>
-          <Navbar nav={this.state.nav}/>
+          <Navbar 
+            nav={this.state.primaryNav}
+            secondaryNav={this.state.secondaryNav}
+            logo={logo}
+            />
+
         </header>
       </div>
     );

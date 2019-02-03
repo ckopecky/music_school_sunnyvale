@@ -10,6 +10,20 @@ const Navbar = (props) => {
                     )
                 })}
             </nav>
+            <div className="secondary-navigation">
+                <img src={props.logo} alt="logo"/>
+                <div className="secondary-nav-link">
+                {props.secondaryNav.map(item => {
+                    return (
+                        <div className="secondary-nav-link-a">{item}</div>
+                    )
+                })}
+                </div>
+                <div className="secondary-nav-search">
+                    <label>Search:</label>
+                    <input type="search" placeholder="search"/>
+                </div>
+            </div>
         </React.Fragment>
     );
 };
